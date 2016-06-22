@@ -2,7 +2,50 @@
 <html>
 <head>
     <script>
+        // Feature Set 1 - Declare Some Variables
+        var mySmallNumber = 5;
+        var myString = "5";
+        var myBigNumber = 255;
 
+        // Feature Set 2 - Make Some Comparisons
+        var output1 = mySmallNumber == myString;
+        var output2 = mySmallNumber === myString;
+        var output3 = mySmallNumber < myBigNumber;
+        var output4 = mySmallNumber > myBigNumber;
+        console.log("I expect output1 to be true");
+        console.log("output1 = ", output1);
+        console.log("I expect output2 to be false");
+        console.log("output2 = ", output2);
+        console.log("I expect output3 to be true");
+        console.log("output3 = ", output3);
+        console.log("I expect output4 to be false");
+        console.log("output4 = ", output4);
+
+        //Feature Set 3 - Declare More Variables
+        var gameNumber = 64;
+        var userInput1 = 53;
+        var userInput2 = 64;
+
+        //Feature Set 4 - Conditionals
+        if (userInput1 > gameNumber) {
+            console.log("The number is too high");
+        } else if (userInput1 < gameNumber) {
+            console.log("The number is too low");
+        } else if (userInput1 == gameNumber) {
+            console.log("The correct number has been guessed!")
+        }
+
+        if (userInput1 < 1 || userInput1 > 100) {
+            console.log("The number is out of range");
+        } else {
+            console.log("The number is in range");
+        }
+
+        if (userInput2 == gameNumber) {
+            console.log("The correct number has been guessed!");
+        } else {
+            console.log("Try again");
+        }
     </script>
 </head>
 <body>
