@@ -6,11 +6,21 @@
     <meta name="keywords" content="JavaScript, DOM Events, onclick">
     <meta name="author" content="Elizabeth Alfano">
 </head>
-<body>
+<!-- Feature Set 3 - Using the onload Attribute -->
+<body onload="console.log('Body is loaded')" onclick="console.log('Body has been clicked')">
     <!-- Feature Set 1 - using the onclick attribute -->
     <!-- When Button is clicked a message will display -->
     <button onclick="console.log('You have clicked the button!');" >Click Me</button>
     <!-- When Header clicked a message will display -->
-    <h1 onclick="console.log('You have clicked the header!');" >JavaScript onclick events</h1>
+    <h1 onclick="console.log('You have clicked the header!');" >JavaScript onclick events -- click here to test</h1>
+    <!-- Feature Set 2 - Using the onmouseover Attribute -->
+    <h2 onmouseover="console.log('You are hovering over the h2 right now')">Let's test the onmouseover event -- hover over this header to test</h2>
+    <!-- Feature Set 4 - More onclick Fun -->
+    <p>A short sentence to test putting onclick events on an <em onclick="console.log('You clicked the emphasized text')">emphasized</em> word!</p>
+    <!-- testing event bubbles -->
+    <div onclick="alert('Div handler worked!')">
+        <em>Click here triggers on nested <code>EM</code>, not on <code>DIV</code></em>
+    </div>
+
 </body>
 </html>
