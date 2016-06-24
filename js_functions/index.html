@@ -8,25 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+//Feature Set 3.2 - Add onclick to HTML
 <div id="game-area">
     <div class="card">
         <div class="front"><img src="imgs/british_flag.jpg" alt=""></div>
-        <div class="back"><img src="imgs/card_design.png" alt="Card Back"></div>
+        <div class="back" onclick="cardFlip(this)" ><img src="imgs/card_design.png" alt="Card Back"></div>
     </div>
     <div class="card">
         <div class="front"><img src="imgs/path.jpg" alt=""></div>
-        <div class="back"><img src="imgs/card_design.png" alt="Card Back"></div>
+        <div class="back" onclick="cardFlip(this)"><img src="imgs/card_design.png" alt="Card Back"></div>
     </div>
     <div class="card">
         <div class="front"><img src="imgs/british_flag.jpg" alt=""></div>
-        <div class="back"><img src="imgs/card_design.png" alt="Card Back"></div>
+        <div class="back" onclick="cardFlip(this)"><img src="imgs/card_design.png" alt="Card Back"></div>
     </div>
     <div class="card">
         <div class="front"><img src="imgs/path.jpg" alt=""></div>
-        <div class="back"><img src="imgs/card_design.png" alt="Card Back"></div>
+        <div class="back" onclick="cardFlip(this)"><img src="imgs/card_design.png" alt="Card Back"></div>
     </div>
 </div>
-
+<!-- Feature Set 1.2 - Use your function -->
+<br>
+<button onclick="myMessage()">First Function!</button>
+<br><br>
+<!-- Feature Set 1.4 - Using your add function -->
+<button onclick="add(2,3)">ADD</button>
+<!-- Feature Set 2.1 - button for add2 function -->
+<button onclick="console.log(add2result)">ADD #2</button>
 </body>
 </html>
