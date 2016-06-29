@@ -57,13 +57,13 @@
             var playground3li1 = $("<li>").text('Link 1');
             var playground3li2 = $("<li>").text('Link 2');
             var playground3li3 = $("<li>").text('Link 3');
-            playground3ul.append(playground3li1).append(playground3li2).append(playground3li3);
+            playground3ul.append(playground3li1,playground3li2,playground3li3);
             var playground3figure = $("<figure>").addClass("awesome_picture");
             var playground3img = $("<img>").attr("src","http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg");
             var playground3span = $("<span>").addClass("bold_text").text("you are");
-            playground3figure.append(playground3img);
             var playground3figcaption = $("<figcaption>").text("That's right, ").append(playground3span);
-            $('#playground3').append(playground3ul).append(playground3figure).append(playground3figcaption);
+            playground3figure.append(playground3img,playground3figcaption);
+            $('#playground3').append(playground3ul).append(playground3figure);
         });
     </script>
 </head>
