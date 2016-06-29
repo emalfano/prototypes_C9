@@ -39,11 +39,19 @@
     </style>
 
     <script>
+        //Feature Set 2 - Building Out Your Playgrounds
         $(document).ready(function () {
-            //playground 1 code
-
+            //playground 1 code - recreate playground source
+            var playground1h1 =  $("<h1>").text('I am a heading');
+            var playground1p =  $("<p>").text('This is an awesome paragraph');
+            var playground1p2 =  $("<p>").text('This has red text').css("color","red");
+            $('#playground1').append(playground1h1).append(playground1p).append(playground1p2);
             //playground 2 code
-
+            var playground2div1 = $("<div>").addClass("awesome_class").text('Here is some awesome div text');
+            var playground2div2 = $("<div>").addClass("awesome_class").text('Here is MORE awesome div text');
+            var playground2text = "Here is <strong>EVEN MORE</strong> awesome div text";
+            var playground2div3 = $("<div>").addClass("awesome_class").append(playground2text);
+            $('#playground2').append(playground2div1).append(playground2div2).append(playground2div3);
             //playground 3 code
         });
     </script>
