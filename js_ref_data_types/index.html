@@ -15,6 +15,34 @@
         student_array.push("Liz","Kyle"); //add two more students to the array
         console.log("The entire array: " + student_array); //should log every element of the array
         console.log("The length of the updated array is " + student_array.length); //should log length of the array
+        // Feature Set 2.0 - Build an object (I'm down with O.O.P.)
+        var student = {}; // declare an object variable
+        student.firstName = "Elizabeth"; // adds 'key: value' pairs to student object using dot notation
+        student.lastName = "Alfano"; // adds 'key: value' pairs to student object using dot notation
+        student.school = "LearningFuze"; // adds 'key: value' pairs to student object using dot notation
+        student.age = 44; // adds 'key: value' pairs to student object using dot notation
+        student.questionList = []; // adds empty array
+        student.hasQuestion = false; // adds boolean value
+        // Feature Set 2.1 - Add methods to the madness
+        student.greeting = function(){
+            return "Hello, my name is " + this.firstName;
+        };
+        student.aboutMe = function(){
+            return "My full name is " + this.firstName + " " + this.lastName + ", I am " + this.age + " years old and I am a student at " + this.school + ".";
+        };
+        // The question should be added to the student's questionList property
+        student.questionList.askQuestion = function(question) {
+                this.hasQuestion = true;
+                return "A question has been added to your list";
+        };
+        student.answerQuestion = function(){
+            if (this.hasQuestion) {
+                this.hasQuestion = false;
+                return this.questionList[this.questionList.length - 1];
+            } else {
+                return "You have no pending questions";
+            }
+        };
     </script>
 </head>
 <body>
