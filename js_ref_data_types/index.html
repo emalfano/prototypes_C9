@@ -32,17 +32,34 @@
         };
         // The question should be added to the student's questionList property
         student.questionList.askQuestion = function(question) {
+                this.push(question);
+                console.log(student.firstName + " has a question: " + question);
                 this.hasQuestion = true;
                 return "A question has been added to your list";
         };
         student.answerQuestion = function(){
-            if (this.hasQuestion) {
-                this.hasQuestion = false;
+            if (this.questionList.hasQuestion) {
+                this.questionList.hasQuestion = false;
                 return this.questionList[this.questionList.length - 1];
             } else {
                 return "You have no pending questions";
             }
         };
+        // Testing the student methods
+        console.log("Greeting function: ", student.greeting());
+        console.log("aboutMe function: ", student.aboutMe());
+        console.log("answerQuestion function: ", student.answerQuestion());
+        console.log("askQuestion function: ", student.questionList.askQuestion("What is the meaning of life?"));
+        console.log("askQuestion function: ", student.questionList.askQuestion("What is a prototype?"));
+        console.log("askQuestion function: ", student.questionList.askQuestion("How many ways are there to define an object?"));
+        console.log("answerQuestion function last question was : ", student.answerQuestion());
+        console.log("questionList contents: ", student.questionList);
+
+        // Output for console.log("Here is my student object " + student);
+        // Here is my student object [object Object]
+        // Output for console.log("Here is my student object", student);
+        // Here is my student object Object {firstName: "Elizabeth", lastName: "Alfano", school: "LearningFuze", age: 44, questionList: Array[3]…}
+        // Second one seems better
     </script>
 </head>
 <body>
