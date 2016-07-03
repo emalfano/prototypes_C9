@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <title>JS Repeat Blocks</title>
+    <meta name="description" content="This prototype introduce you to JavaScript repeat blocks, giving you the ability to loop through data structures such as arrays and objects.">
+    <meta name="keywords" content="JavaScript, repeat blocks, looping">
+    <meta name="author" content="Elizabeth Alfano">
+    <script>
+        //Feature set 1 - more array looping fun!
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //create an array
+        console.log("The array in ascending");
+        for (var i=0; i<numbers.length; i++) { // output numbers in ascending order
+            console.log(numbers[i]);
+        }
+        console.log("The array in reverse");
+        for (var i=numbers.length; i>=0; i--) { // output numbers in descending order
+            console.log(numbers[i]);
+        }
+        console.log("The odd items of the array");
+        for (var i=0; i < numbers.length; i++) { // output only the odd numbers
+            var value = numbers[i];
+            if (value % 2 != 0){
+                console.log(numbers[i]);
+            }
+        }
+        console.log("The odd items of the array of new array");
+        var mixedArray = [4, 56, 11, 13, 97, 22, 7, 36, 19, 5, 8, 10];//new array
+        for (var i=0; i < mixedArray.length; i++) { // output only the odd numbers
+            var value = mixedArray[i];
+            if (value % 2 != 0){
+                console.log(mixedArray[i]);
+            }
+        }
+
+        //Feature Set 2 - For in loop
+        var classRoom = {desk1: 'Stu', desk2: 'Peggy', desk3: 'LoneStar', desk4: 'George', desk5: 'Sheldon'};// define the object
+        for (var index in classRoom){ // loops through the object
+            console.log(classRoom[index], " is at ", index);
+        }
+        //Feature Set 3 - While loop
+        // define an array of objects
+        var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82}, {name: "George", grade: 93}, {name: "Robert", grade: 85}];
+        // define the findStudent function
+        function findStudent(studentName){
+             var output = '';
+             var i = 0;
+             var found = false;
+            //search the array for matching student
+             while(found == false && i < studentArray.length) {
+                 var student = studentArray[i];
+                 if (student.name == studentName) {
+                     output = "Found " + studentName + " their grade is: " + student.grade;
+                     found = true;
+                 }
+                 i++;
+             }
+             if (!found) {
+                 output = "Student " + studentName + " not found.";
+             }
+            return output;
+        }
+        console.log("Feature set 3 tests")
+        console.log("Test 1 George :", findStudent("George"));
+        console.log("Test 2 Fred :", findStudent("Fred"));
+        console.log("Test 3 Hank :", findStudent("Hank"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
