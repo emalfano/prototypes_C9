@@ -2,9 +2,11 @@
 <html>
 <head>
     <title>CSS Bootstrap Grid System</title>
-
+    <meta name="description" content="This prototype is designed to introduce us to Bootstrap and specifically the Bootstrap grid system.">
+    <meta name="keywords" content="CSS, Bootstrap, grid system">
+    <meta name="author" content="Elizabeth Alfano">
     <!-- Enter the Bootstrap CDN address into the link below -->
-    <link rel="stylesheet" href="BOOTSTRAP ADDRESS HERE">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- Note: Your stylesheets should always come after the Bootstrap stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -13,25 +15,29 @@
 <body>
 
 <div id="bootstrap_grids" class="container-fluid">
+    <!--Feature Set 1 - Equal Grids-->
     <div class="featureset_1 row">
-        <div>Make me 33% wide</div>
-        <div>Make me 33% wide</div>
-        <div>Make me 33% wide</div>
+        <div class="col-sm-4">Make me 33% wide</div>
+        <div class="col-sm-4">Make me 33% wide</div>
+        <div class="col-sm-4">Make me 33% wide</div>
     </div>
+    <!--Feature Set 2 - Unequal Grids-->
     <div class="featureset_2 row">
-        <div>Make me 50% wide</div>
-        <div>Make me 25% wide</div>
-        <div>Make me 25% wide</div>
+        <div class="col-sm-6">Make me 50% wide</div>
+        <div class="col-sm-3">Make me 25% wide</div>
+        <div class="col-sm-3">Make me 25% wide</div>
     </div>
+    <!--Feature Set 3 - Unequal Grids With Gutters-->
     <div class="featureset_3 row">
-        <div>17% wide with 8% gutter on the left</div>
-        <div>Make me 42% wide</div>
-        <div>17% wide with a 17% gutter on the right</div>
+        <div class="col-sm-2 col-sm-offset-1">17% wide with 8% gutter on the left</div>
+        <div class="col-sm-5">Make me 42% wide</div>
+        <div class="col-sm-2">17% wide with a 17% gutter on the right</div>
     </div>
+    <!--Feature Set 4 - Responsive Grid With Hidden / Shown Element-->
     <div class="featureset_4 row">
-        <div>25% wide on desktop, 100% wide on mobile</div>
-        <div>50% wide of desktop, 100% wide on mobile</div>
-        <div>25% wide on desktop, invisible on mobile</div>
+        <div class="col-lg-3 col-sm-12">25% wide on desktop, 100% wide on mobile</div>
+        <div class="col-lg-6 col-sm-12">50% wide of desktop, 100% wide on mobile</div>
+        <div class="col-lg-3 col-sm-0">25% wide on desktop, invisible on mobile</div>
     </div>
 </div>
 
