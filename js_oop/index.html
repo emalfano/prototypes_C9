@@ -7,14 +7,37 @@
     <meta name="author" content="Elizabeth Alfano">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-        //feature set 1 - coin stack
+        //Feature Set 1 - Coin Stack
         //creating a constructor that takes in a parameter for the initial
+        //Feature Set 2 - Add Remove Coins
         var coin_stack = function(initial_amount) {
             this.value = initial_amount;
-        }
-
+            this.add_coins = function (add_amount) {
+                this.value += add_amount;
+            };
+            this.remove_coins = function (remove_amount) {
+                if (this.value >= remove_amount) {
+                    this.value -= remove_amount;
+                    return this.value;
+                } else {
+                    this.value = 0;
+                    return this.value;
+                }
+            };
+        };
+        //test the methods
+        console.log('newing up the coin_stack with 50 coins, so i have ...');
         var my_coin_stack = new coin_stack(50);
-        console.log('my_coin_stack contains ', my_coin_stack.value, ' coins');
+        console.log('my_coin_stack contains ' + my_coin_stack.value, ' coins');
+        my_coin_stack.add_coins(15);
+        console.log('now i added 15 coins, so i should have 65 in my next console log...');
+        console.log('I have '+ my_coin_stack.value + ' coins in my coin stack');
+        my_coin_stack.remove_coins(37);
+        console.log('now i removed 37 coins, so should have 28 if my math\'s right...');
+        console.log('I have '+ my_coin_stack.value + ' coins in my coin stack');
+        my_coin_stack.remove_coins(55);
+        console.log('now i removed 55 coins, which is more than I have so that should wipe me out ...');
+        console.log('I have '+ my_coin_stack.value + ' coins in my coin stack');
     </script>
 </head>
 <body>
