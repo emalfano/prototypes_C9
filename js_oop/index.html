@@ -7,26 +7,14 @@
     <meta name="author" content="Elizabeth Alfano">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-        //just creating some variables for feature set 1
-        var x = null;
-        var y;
-        var z = "This is a string";
+        //feature set 1 - coin stack
+        //creating a constructor that takes in a parameter for the initial
+        var coin_stack = function(initial_amount) {
+            this.value = initial_amount;
+        }
 
-        //Feature set 2 True or False
-        var output1 = x == y; // expected result is true
-        var output2 = x == z; // expected result is false
-        var output3 = y == z; // expected result is false
-        console.log("My output1", output1);
-        console.log("My output2", output2);
-        console.log("My output3", output3);
-
-        //Feature set 3 typeof
-        var output4 = "x is an " + typeof x; // expected result is true
-        var output5 = "y is " + typeof y; // expected result is false
-        var output6 = "z is a " + typeof z; // expected result is false
-        console.log("My output4", output4);
-        console.log("My output5", output5);
-        console.log("My output6", output6);
+        var my_coin_stack = new coin_stack(50);
+        console.log('my_coin_stack contains ', my_coin_stack.value, ' coins');
     </script>
 </head>
 <body>
