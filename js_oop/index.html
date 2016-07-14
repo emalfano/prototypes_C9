@@ -25,6 +25,14 @@
                 }
             };
         };
+        //end of constructor function
+        //Feature Set 3 - Prototype in the prototype
+        coin_stack.prototype.transfer_coins = function(from_obj,transferred_amount){
+            //The method should take the given amount of coins and remove them from the passed in object then add them to the current object
+            from_obj.remove_coins(transferred_amount);
+            this.add_coins(transferred_amount);
+            return transferred_amount;
+        };
         //test the methods
         console.log('newing up the coin_stack with 50 coins, so i have ...');
         var my_coin_stack = new coin_stack(50);
@@ -38,6 +46,20 @@
         my_coin_stack.remove_coins(55);
         console.log('now i removed 55 coins, which is more than I have so that should wipe me out ...');
         console.log('I have '+ my_coin_stack.value + ' coins in my coin stack');
+        //test for feature set 3
+        var erics_coins = new coin_stack(50);
+        var dans_coins = new coin_stack(50);
+        console.log('Eric\'s initial coin stack has' + erics_coins.value+' coins');
+        console.log('Dan\'s initial coin stack has' + dans_coins.value+' coins');
+        //transfer 30 coins from dan to eric
+        erics_coins.transfer_coins(dans_coins,30);
+        console.log('Dan should now have 20 and he has ' + dans_coins.value +' coins');
+        console.log('Eric should now have 80 and he has ' + erics_coins.value +' coins');
+        if (dans_coins.value != 20 || erics_coins.value != 80) {
+            console.log('Go back to your code');
+        } else {
+            console.log('Go relax and have glass of wine \'cause you just rocked it!');
+        }
     </script>
 </head>
 <body>
