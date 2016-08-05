@@ -4,9 +4,85 @@
     <meta charset="UTF-8">
     <title>Angular Intro</title>
     <!-- Add Angular CDN below -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <style>
 
+    </style>
 </head>
-<body>
+<body ng-app="myApp">
+    <div ng-controller="formController as fc">
+        <div>
+            <input type="text" ng-model="fc.student.fName"><br><br>
+            <input type="text" ng-model="fc.student.lName"><br><br>
+            <input type="text" ng-model="fc.student.email"><br><br>
+            <textarea ng-model="fc.student.comments" ng-keypress="fc.checkRemainingChars()" ng-disabled="fc.noRemainingChars()"></textarea>
+            <p>Characters remaining {{ fc.remainingChars() }}</p><br><br>
+            <!--Add a button after the textarea that calls the add function when clicked-->
+            <button ng-click="fc.addStudent()">Add Student</button>
+            <table> <!-- Full Name, Email, and Comments-->
+                <tbody>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Comments</th>
+                </tr>
+                <tr ng-repeat="student in fc.formArray">
+                    <td>{{ student.fName + student.lName }}</td>
+                    <td>{{ student.email }}</td>
+                    <td>{{ student.comments }}</td>
+                    <!--<td><button ng-click="fc.students.splice($index,1)">Delete</button>-->
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<script>
+    // Feature Set 1 - Adding Control
+    // Feature Set 2 - Making it functional
+    var app = angular.module('myApp', []);
 
+    app.controller("formController",function(){
+        this.student = {
+            'comments' : ''
+        };
+        this.formArray = [];
+        // add another method that adds the form object to the formArray
+        this.addStudent = function(){
+            this.formArray.push(this.student);
+            console.log(this.formArray);
+            this.student = {};
+            // Feature Set 3 - Keeping it Short
+
+
+        };
+        this.maxLength = 25;
+        /*
+         method returns the total number of characters still available for the comment
+         */
+        this.remainingChars = function(){
+            console.log('comments length '+this.student.comments.length);
+            return this.maxLength - this.student.comments.length;
+        };
+        //method to your controller that returns true if remaining characters <= 0 and false for everything else
+        this.noRemainingChars = function(){
+            if (this.remainingChars() <= 0){
+                return true;
+            } else {
+                return false;
+            }
+        };
+        //disable the textarea if the max amount of characters have been used
+        this.checkRemainingChars = function(){
+            if (this.noRemainingChars()){
+                console.log("true");
+
+            } else {
+                console.log("false");
+            }
+        };
+    });
+
+
+</script>
 </body>
 </html>
