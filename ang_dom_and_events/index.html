@@ -7,9 +7,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 </head>
 <body ng-app>
-<div ng-init="buttonDisabled=true"> //ng-init initializes buttonDisabled
-    <button ng-disabled="buttonDisabled" onclick="alert('hi')">Click Me</button><br>//ng-disabled is used to disable the element if it is set to true
-    <input type="checkbox" ng-model="buttonDisabled">Disable the button //ng-model binds the buttonDisabled variable to the checkbox element
+<div ng-init="buttonDisabled=true;counter=0" > <!--ng-init initializes buttonDisabled-->
+    <span ng-hide="buttonDisabled">The button is enabled</span>
+    <span ng-show="buttonDisabled">The button is disabled</span>
+    <button ng-disabled="buttonDisabled" ng-click="counter = counter + 1">Click Me</button><br><!--ng-disabled is used to disable the element if it is set to true-->
+    <input type="checkbox" ng-model="buttonDisabled">Disable the button <!--ng-model binds the buttonDisabled variable to the checkbox element-->
+    <p>The button has been clicked {{ counter }} times</p>
 </div>
 
 </body>
