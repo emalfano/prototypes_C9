@@ -23,7 +23,7 @@ SELECT * FROM `todo_items` WHERE `user_id` = 4
 
 -- Insert a new todo item into the table by that same user
 
-INSERT INTO `todo_items` (`title`, `details`, `user_id`) VALUES ('Mop', 'mop the floors', '4')
+INSERT INTO `todo_items` (`title`, `details`, `user_id`, `timestamp`) VALUES ('Mop', 'mop the floors', '4', now())
 
 -- Delete a todo item by that user
 
