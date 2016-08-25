@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>js_regex</title>
+
+    <script>
+//        feature set 1
+        var fs1a = /e/;
+        var fs1b = /e+/gi;
+        var fs1c = /st.r/;
+        str = 'stir the star';
+        str1 = 'stim the stat';
+        str2 = 'stir the stat';
+        str3 = 'stim the star';
+        var n = str.match(/st.r/g);
+        console.log('n '+n);
+        var o = str1.match(/st.r/g);
+        console.log('o '+o);
+        var p = str2.match(/st.r/g);
+        console.log('p '+p);
+        var q = str3.match(/st.r/g);
+        console.log('q '+q);
+
+//        feature set 2
+        var phoneNumber = /[(1]*[-\s]*[0-9]{3}[\s-)]*[0-9]{3}[-]*[)]*[\s]*[0-9]{4}/;
+
+
+//        feature set 3 (look for look ahead and look behind)
+
+    </script>
+
+</head>
+<body>
+    <h1>JavaScript - Regular Expressions</h1>
+</body>
+</html>
