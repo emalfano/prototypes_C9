@@ -3,8 +3,11 @@
 <head>
 </head>
 <body>
-	<form id="file_upload">
-		
-	</form>
+<form id="file_upload" enctype="multipart/form-date" action="file_handler.php" method="POST" >
+	Select image to upload:
+	<input type="file" name="upload_file">
+	<input type="text" name="description">
+	<button>Submit</button>
+</form>
 </body>
 </html>
