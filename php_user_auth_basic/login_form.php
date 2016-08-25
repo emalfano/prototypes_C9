@@ -17,7 +17,7 @@ if(!empty($_SESSION['message'])){
 Login: <input name="username" id="username" placeholder="Username">
 <input name="password" id="password" placeholder="Password">
 <input type="submit" value="Submit" onclick="loginHandler()" >
-<p id="message"><?=$message?></p>
+<p id="message"></p>
 
 <script>
     var loginHandler = function(){
@@ -26,13 +26,15 @@ Login: <input name="username" id="username" placeholder="Username">
             url: "login_handler.php",
             method: "POST",
             data: {'username': $('#username').val(), 'password': $('#password').val()},
-            dataType:'text',
+            dataType:'json',
             cache: false,
             success: function(response){
                 console.log('Call success ', response);
+                $('#message').text(response.message);
             },
             error: function(response){
                 console.log('Call fail ', response);
+                $('#message').text(response.message);
             }
         });
 
