@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163c4ad0-e2a2-4b47-ad62-09c7c802e725" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php_directory_operations/gallery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php_directory_operations/get_images.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php_directory_operations/carousel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="prototypes_c9.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,12 +55,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gallery.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gallery.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_directory_operations/gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-84">
-              <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+            <state relative-caret-position="264">
+              <caret line="8" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="31" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carousel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php_directory_operations/carousel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="411">
+              <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,6 +92,7 @@
         <option value="$PROJECT_DIR$/php_user_auth_basic/login_handler.php" />
         <option value="$PROJECT_DIR$/php_directory_operations/get_images.php" />
         <option value="$PROJECT_DIR$/php_directory_operations/gallery.php" />
+        <option value="$PROJECT_DIR$/php_directory_operations/carousel.php" />
       </list>
     </option>
   </component>
@@ -217,12 +232,12 @@
       <updated>1472072586258</updated>
       <workItem from="1472072587479" duration="9465000" />
       <workItem from="1472440482658" duration="126000" />
-      <workItem from="1472440621630" duration="11825000" />
+      <workItem from="1472440621630" duration="16259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21416000" />
+    <option name="totallyTimeSpent" value="25850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="751" y="14" width="2428" height="1672" extended-state="0" />
@@ -361,9 +376,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php_directory_operations/gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+        <state relative-caret-position="264">
+          <caret line="8" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_directory_operations/carousel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
